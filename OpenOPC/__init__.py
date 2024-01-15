@@ -570,12 +570,12 @@ class client():
 
                if single:
                   if include_error:
-                     yield (value, quality, timestamp, error_msgs[tag])
+                     yield (value, quality, timestamp, tag_error[tag], error_msgs[tag])
                   else:
                      yield (value, quality, timestamp)
                else:
                   if include_error:
-                     yield (tag, value, quality, timestamp, error_msgs[tag])
+                     yield (tag, value, quality, timestamp, tag_error[tag], error_msgs[tag])
                   else:
                      yield (tag, value, quality, timestamp)
 
